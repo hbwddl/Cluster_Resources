@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --partition=short-cpu
+#SBATCH --job-name=R_Basic
+#SBATCH --error=R_Basic.%J.err
+#SBATCH --output=R_Basic.%J.out
+
+module load R
+
+Rscript R_Basic.R

@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --partition=short-cpu
+#SBATCH --job-name=R_system_variables
+#SBATCH --error=R_system_variables.%J.err
+#SBATCH --output=R_system_variables.%J.out
+#SBATCH --array=1-4
+
+module load R
+
+Rscript R_script_array_system_variables.R
